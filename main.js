@@ -3,19 +3,50 @@
 // And you can and should use them in your `isRegisteredUser` function.
 // But we use them in your test code as well, so whatever you do, don't delete them!
 
-const user1 = 'colin.jaffe@codeimmersives.com';
-const password1 = 'Hotforhimself';
-const user2 = 'mesuara@codeimmersives.com';
+const user1 = 'ruth.moyano@codeimmersives.com';
+const password1 = 'WhataGreatpassword';
+const user2 = 'ruth@codeimmersives.com';
 const password2 = 'Console.logger';
-const user3 = 'anthony@codeimmersives.com';
+const user3 = 'colin@codeimmersives.com';
 const password3 = 'like a BOSS';
 
 
 // **YOUR** code below. Pass those tests!
 
+  
+function isValidEmail(email) {
+    if(email.includes('@codeimmersives.com') && email.length >= 20) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+  function isValidPassword(password) {
+    return (
+      password.length >= 8 &&
+      password.toUpperCase() !== password &&
+      password.toLowerCase() !== password
+    )
+  }
 
+  function isRegisteredUser(email) {
+    return email === user1 || email === user2 || email === user3;
+  }
 
+function passwordMatches(email, password) {
+  if(email === user1 && password === password1) {
+    return true;
+  }
+  if(email === user2 && password === password2) {
+    return true;
+  }
+  if(email === user3 && password === password3) {
+    return true;
+  }
+
+  return false;
+}
 
 
 // Our code below. Do not touch!
